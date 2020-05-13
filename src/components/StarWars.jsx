@@ -16,7 +16,7 @@ const StarWars = () => {
 
     //const [favoriteSelected,setFavoriteSelected] = useState(false);
     
-    const [url,setUrl] = useState(`http://swapi.dev/api/people/?page=${pageNumber}`);
+    const [url,setUrl] = useState(`https://swapi.dev/api/people/?page=${pageNumber}`);
     
 
    
