@@ -42,7 +42,7 @@ const StarWars = () => {
         setShowPrevious(true);
         pageNumber= pageNumber+1;
        
-      setUrl(`http://swapi.dev/api/people/?page=${pageNumber}`) ;
+      setUrl(`https://swapi.dev/api/people/?page=${pageNumber}`) ;
       }else{
         console.log('over');
         setShowNext(false);
@@ -60,7 +60,7 @@ const StarWars = () => {
         pageNumber= pageNumber-1;
         console.log('page number is:',pageNumber);
        
-      setUrl(`http://swapi.dev/api/people/?page=${pageNumber}`) ;
+      setUrl(`https://swapi.dev/api/people/?page=${pageNumber}`) ;
       }else{
         
         setShowPrevious(false);
