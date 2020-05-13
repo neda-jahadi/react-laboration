@@ -1,25 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{useState} from 'react';
 import './App.css';
+import StarWars from './components/StarWars';
+//import favorites from './components/Favorites';
+import Favorites from './components/Favorites';
+import Header from './components/Header';
+import Holder from './components/Holder';
+import Planet from './components/Planet';
+import Form from './components/Form';
 
 function App() {
+  const SHOW_DATA ='data' , SHOW_FAVORITES ='favorites', PLANET ='planet', FORM ='form';
+  const [view, setView] = useState(SHOW_DATA);
+  const [favoritePlanet] = ([]);
+  
+
+  let mainContent = null;
+  if (view === SHOW_DATA){
+    mainContent = <StarWars />;
+  }else if(view === SHOW_FAVORITES){
+    mainContent = <Favorites />;
+  }else if(view === PLANET) {
+    mainContent = <Planet favoritePlanet={favoritePlanet} />;
+  }else{
+    mainContent = <Form />;
+  }
+   
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <div className="header">
+           <Header setView={setView} menu={{ SHOW_DATA, SHOW_FAVORITES,PLANET,FORM }} />
+        </div>
+        
+        <main>
+          <Holder>
+            {mainContent}
+          </Holder>
+            
+        </main>
+        
+        </>
   );
 }
 

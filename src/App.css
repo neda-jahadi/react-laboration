@@ -1,21 +1,10 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,12 +16,135 @@
 .App-link {
   color: #61dafb;
 }
+.header {
+  background-color: black;
+  color: whitesmoke;
+  text-align: center;
+  padding-bottom: 1em;
+}
+.holder {
+  border: 1px solid gray;
+  
+  padding: 1em;
+  background-color: teal;
+  
+}
+.showNext {
+  
+  display:inline;
+}
+.hideShowNext{
+  
+  display:none;
+}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.favorite-selected {
+
+ display: none;
+}
+.favorite-unselected {
+  color: green;
+}
+.visible {
+  color: red;
+}
+.added-before {
+  display: block;
+  
+}
+.not-added {
+  display: none;
+}
+.unvisible {
+  display: none;
+}
+.invented {
+  display: block;
+} 
+.existing {
+  display: none;
+}
+.status {
+  font-weight: bold;
+  font-size: large;
+}
+.nav {
+  text-align: left;
+  display: flex;
+}
+.nav > button {
+  margin: 1em;
+}
+.form-button > button:hover {
+    background-color: gray;
+}
+button {
+  padding: 1em;
+  border-radius: 5px;
+  border: none;
+  margin: 0.5em;
+}
+.form-button {
+  text-align: center;
+}
+.form-button > button {
+  width: 100%;
+}
+
+input {
+  padding: 1em;
+  
+  
+  margin: 1em;
+}
+.favorite-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1em;
+}
+.selected-favorites > div {
+  border: 1px solid lightblue;
+  padding: 1em;
+
+
+
+}
+.selected-favorites > div:nth-child(even) {
+  background-color: lightblue;
+}
+.list-leader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.people-list {
+  display: flex;
+  flex-direction: column;
+  
+}
+.people-list > div:nth-child(even){
+  background-color: lightblue;
+  
+}
+.people-list > div {
+  padding: 1em;
+}
+.favorite-clicked {
+  background-color: gray;
+}
+.valid {
+  border-color: green;
+}
+.invalid {
+  border-color: red;
+}
+.show-error {
+  border: 1px solid whitesmoke;
+  background-color: whitesmoke;
+  display: inline-bock;
+  color: red;
+  font-size: large;
+  padding: 0.2em;
 }
