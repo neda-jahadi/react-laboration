@@ -18,7 +18,7 @@ const Planet = ({favoritePlanet}) => {
 
     //const [favoriteSelected,setFavoriteSelected] = useState(false);
     
-    const [url,setUrl] = useState(`http://swapi.dev/api/planets/?page=${pageNumber}`);
+    const [url,setUrl] = useState(`https://swapi.dev/api/planets/?page=${pageNumber}`);
     
    
    
@@ -52,7 +52,7 @@ const Planet = ({favoritePlanet}) => {
         setShowPrevious(true);
         pageNumber= pageNumber+1;
        
-      setUrl(`http://swapi.dev/api/planets/?page=${pageNumber}`) ;
+      setUrl(`https://swapi.dev/api/planets/?page=${pageNumber}`) ;
       }else{
         console.log('over');
         setShowNext(false);
@@ -70,7 +70,7 @@ const Planet = ({favoritePlanet}) => {
         pageNumber= pageNumber-1;
         console.log('page number is:',pageNumber);
        
-      setUrl(`http://swapi.dev/api/planets/?page=${pageNumber}`) ;
+      setUrl(`https://swapi.dev/api/planets/?page=${pageNumber}`) ;
       }else{
         
         setShowPrevious(false);
